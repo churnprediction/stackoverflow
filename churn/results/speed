@@ -1,0 +1,240 @@
+Number of samples, Number of features:  (100000, 26)
+Number of samples, Number of features:  (100000, 1)
+K: 1
+Using Decision Trees
+Mean 0.56415 Standard Deviation 0.00246099573344
+Mean 0.5697 Standard Deviation 0.00299098645935
+Mean 0.57105 Standard Deviation 0.00302266438759
+Mean 0.57124 Standard Deviation 0.00251244900446
+Mean 0.5714 Standard Deviation 0.00257875939165
+Mean 0.57189 Standard Deviation 0.00237379443086
+Mean 0.57271 Standard Deviation 0.00265007547062
+Mean 0.57296 Standard Deviation 0.00268037310836
+Mean 0.57329 Standard Deviation 0.00285427749177
+Mean 0.57297 Standard Deviation 0.00283973590321
+Mean 0.573 Standard Deviation 0.00304795013083
+Mean 0.57305 Standard Deviation 0.00317435032723
+Mean 0.57306 Standard Deviation 0.00328060969943
+Mean 0.57304 Standard Deviation 0.00308162294903
+Mean 0.5731 Standard Deviation 0.00308415304419
+Mean 0.57283 Standard Deviation 0.00305975489214
+Mean 0.5729 Standard Deviation 0.00306659420204
+Mean 0.57282 Standard Deviation 0.00318333158813
+Mean 0.5729 Standard Deviation 0.00310290186761
+Best DT:  (0.57328999999999997, 180)
+Number of samples, Number of features:  (100000, 27)
+Number of samples, Number of features:  (100000, 1)
+K: 2
+Using Decision Trees
+Mean 0.52585 Standard Deviation 0.00388696539732
+Mean 0.52785 Standard Deviation 0.0039727194716
+Mean 0.53035 Standard Deviation 0.00243320775932
+Mean 0.53231 Standard Deviation 0.00308591963602
+Mean 0.53232 Standard Deviation 0.00394177624936
+Mean 0.53394 Standard Deviation 0.00434124406133
+Mean 0.53541 Standard Deviation 0.00446193904037
+Mean 0.53561 Standard Deviation 0.0038573177209
+Mean 0.53695 Standard Deviation 0.00431676962554
+Mean 0.5378 Standard Deviation 0.00451597165624
+Mean 0.53859 Standard Deviation 0.0046295680144
+Mean 0.53882 Standard Deviation 0.00429366975908
+Mean 0.53922 Standard Deviation 0.00362899435106
+Mean 0.53897 Standard Deviation 0.00307084678875
+Mean 0.53892 Standard Deviation 0.0028251725611
+Mean 0.53853 Standard Deviation 0.00276443484278
+Mean 0.5381 Standard Deviation 0.00252942681254
+Mean 0.53779 Standard Deviation 0.00269237813095
+Mean 0.53747 Standard Deviation 0.00276009057822
+Best DT:  (0.53922000000000003, 260)
+Number of samples, Number of features:  (73116, 28)
+Number of samples, Number of features:  (73116, 1)
+K: 3
+Using Decision Trees
+Mean 0.523551806022 Standard Deviation 0.00452408922416
+Mean 0.523455968226 Standard Deviation 0.00438008350654
+Mean 0.524645890444 Standard Deviation 0.00502520387512
+Mean 0.526629012456 Standard Deviation 0.00315255547133
+Mean 0.526970882505 Standard Deviation 0.0033487535879
+Mean 0.527613704522 Standard Deviation 0.00301622741416
+Mean 0.529583197152 Standard Deviation 0.00411440100236
+Mean 0.529446353356 Standard Deviation 0.0027027537274
+Mean 0.52958310362 Standard Deviation 0.00273889681488
+Mean 0.529774612728 Standard Deviation 0.00365674244683
+Mean 0.529624161997 Standard Deviation 0.00368705073
+Mean 0.529637845628 Standard Deviation 0.00375688599728
+Mean 0.530649873157 Standard Deviation 0.00301951293544
+Mean 0.529760865495 Standard Deviation 0.00287360063062
+Mean 0.529760929097 Standard Deviation 0.00276470747863
+Mean 0.530677330209 Standard Deviation 0.00355926806459
+Mean 0.530786752494 Standard Deviation 0.00442050113461
+Mean 0.530991956457 Standard Deviation 0.00456746135981
+Mean 0.531128656214 Standard Deviation 0.00516196718594
+Best DT:  (0.53112865621390626, 380)
+Number of samples, Number of features:  (46418, 29)
+Number of samples, Number of features:  (46418, 1)
+K: 4
+Using Decision Trees
+Mean 0.516372824276 Standard Deviation 0.00858381083359
+Mean 0.517019083509 Standard Deviation 0.00828254876584
+Mean 0.516954405134 Standard Deviation 0.00910943889963
+Mean 0.517600817545 Standard Deviation 0.00968810515077
+Mean 0.518182454104 Standard Deviation 0.00881323162756
+Mean 0.51973357931 Standard Deviation 0.00826150589349
+Mean 0.518957967968 Standard Deviation 0.00833724041274
+Mean 0.522383336392 Standard Deviation 0.00661609941412
+Mean 0.521370827853 Standard Deviation 0.00553857733435
+Mean 0.519970476508 Standard Deviation 0.00620453180532
+Mean 0.520185914819 Standard Deviation 0.00651144803451
+Mean 0.520229018264 Standard Deviation 0.00537572006018
+Mean 0.52022900898 Standard Deviation 0.00609825442351
+Mean 0.520056632337 Standard Deviation 0.00693768544503
+Mean 0.519733430773 Standard Deviation 0.00663013551269
+Mean 0.521456997607 Standard Deviation 0.00620249566933
+Mean 0.520983073241 Standard Deviation 0.00651052721791
+Mean 0.520703021539 Standard Deviation 0.00700647596069
+Mean 0.521327701199 Standard Deviation 0.00645042675311
+Best DT:  (0.52238333639225742, 160)
+Number of samples, Number of features:  (32446, 30)
+Number of samples, Number of features:  (32446, 1)
+K: 5
+Using Decision Trees
+Mean 0.51611858517 Standard Deviation 0.00745997273547
+Mean 0.513745485324 Standard Deviation 0.00730251449771
+Mean 0.511341445342 Standard Deviation 0.00952355630857
+Mean 0.511834901081 Standard Deviation 0.00910045336359
+Mean 0.513252219577 Standard Deviation 0.00861555629712
+Mean 0.517412884092 Standard Deviation 0.00693790753705
+Mean 0.518615008578 Standard Deviation 0.00827770744988
+Mean 0.520156154114 Standard Deviation 0.00728450076632
+Mean 0.519693828502 Standard Deviation 0.0101297324968
+Mean 0.520433304391 Standard Deviation 0.00865585006318
+Mean 0.521481260176 Standard Deviation 0.00968171572574
+Mean 0.523176393921 Standard Deviation 0.00929472754561
+Mean 0.523854626011 Standard Deviation 0.00848330715232
+Mean 0.523577209745 Standard Deviation 0.00813943869719
+Mean 0.523145615278 Standard Deviation 0.00823537361085
+Mean 0.524440085192 Standard Deviation 0.00766959642417
+Mean 0.523915993305 Standard Deviation 0.00908886224913
+Mean 0.52465555469 Standard Deviation 0.0100408919954
+Mean 0.524624842544 Standard Deviation 0.00927526863237
+Best DT:  (0.52465555469003822, 360)
+Number of samples, Number of features:  (4830, 41)
+Number of samples, Number of features:  (4830, 1)
+K: 16
+Using Decision Trees
+Mean 0.5 Standard Deviation 0.0217194034521
+Mean 0.505383022774 Standard Deviation 0.0178450614756
+Mean 0.4983436853 Standard Deviation 0.0155775605018
+Mean 0.508074534161 Standard Deviation 0.0223985562506
+Mean 0.518633540373 Standard Deviation 0.0188905668643
+Mean 0.518426501035 Standard Deviation 0.0236097478926
+Mean 0.530020703934 Standard Deviation 0.0170979899148
+Mean 0.52380952381 Standard Deviation 0.0217144689062
+Mean 0.520910973085 Standard Deviation 0.0201201335209
+Mean 0.520910973085 Standard Deviation 0.0187299095286
+Mean 0.525465838509 Standard Deviation 0.0210081174227
+Mean 0.527743271222 Standard Deviation 0.0186668669077
+Mean 0.527329192547 Standard Deviation 0.0194231149199
+Mean 0.527743271222 Standard Deviation 0.0201680120693
+Mean 0.526708074534 Standard Deviation 0.0191598100228
+Mean 0.528778467909 Standard Deviation 0.0177426793256
+Mean 0.530020703934 Standard Deviation 0.0208689079393
+Mean 0.531884057971 Standard Deviation 0.0181073626535
+Mean 0.529192546584 Standard Deviation 0.0140176487617
+Best DT:  (0.53188405797101457, 360)
+Number of samples, Number of features:  (4194, 42)
+Number of samples, Number of features:  (4194, 1)
+K: 17
+Using Decision Trees
+Mean 0.512882713945 Standard Deviation 0.025060138819
+Mean 0.51216217752 Standard Deviation 0.0258534626908
+Mean 0.504767018979 Standard Deviation 0.0257845645091
+Mean 0.517171837709 Standard Deviation 0.0262448479242
+Mean 0.518366291624 Standard Deviation 0.0223784423603
+Mean 0.51789294238 Standard Deviation 0.0184218582559
+Mean 0.520988180475 Standard Deviation 0.0261199489149
+Mean 0.53338106603 Standard Deviation 0.0201772163781
+Mean 0.530286396181 Standard Deviation 0.0181580235043
+Mean 0.527662234345 Standard Deviation 0.0122478675675
+Mean 0.534101602455 Standard Deviation 0.0194978710093
+Mean 0.532199113536 Standard Deviation 0.0227141307124
+Mean 0.532437208774 Standard Deviation 0.0215021752602
+Mean 0.524564155018 Standard Deviation 0.0208180798348
+Mean 0.522182066144 Standard Deviation 0.0241308210702
+Mean 0.522415047164 Standard Deviation 0.0209996271991
+Mean 0.526938856688 Standard Deviation 0.0243399514277
+Mean 0.527417888396 Standard Deviation 0.0243300965903
+Mean 0.525745539266 Standard Deviation 0.0256847727379
+Best DT:  (0.53410160245482452, 220)
+Number of samples, Number of features:  (3902, 43)
+Number of samples, Number of features:  (3902, 1)
+K: 18
+Using Decision Trees
+Mean 0.514356351236 Standard Deviation 0.0102135203211
+Mean 0.517180798741 Standard Deviation 0.0205704182559
+Mean 0.507437864778 Standard Deviation 0.0162202345772
+Mean 0.51819070103 Standard Deviation 0.0190648781976
+Mean 0.528439241918 Standard Deviation 0.015388248319
+Mean 0.529464227162 Standard Deviation 0.0144266085891
+Mean 0.533819922618 Standard Deviation 0.0166647694133
+Mean 0.51614073054 Standard Deviation 0.0136216359126
+Mean 0.515124270444 Standard Deviation 0.0127926462543
+Mean 0.512817889698 Standard Deviation 0.0192219930613
+Mean 0.513072332612 Standard Deviation 0.0203810434381
+Mean 0.514611449931 Standard Deviation 0.0194929946348
+Mean 0.50410059676 Standard Deviation 0.0194541915569
+Mean 0.501276805036 Standard Deviation 0.0146994891996
+Mean 0.501788969769 Standard Deviation 0.016875805159
+Mean 0.503836972916 Standard Deviation 0.0152596415147
+Mean 0.5079401928 Standard Deviation 0.0155053747222
+Mean 0.512042756902 Standard Deviation 0.0176342434661
+Mean 0.511788313988 Standard Deviation 0.0229647074511
+Best DT:  (0.53381992261787647, 140)
+Number of samples, Number of features:  (3486, 44)
+Number of samples, Number of features:  (3486, 1)
+K: 19
+Using Decision Trees
+Mean 0.49456328426 Standard Deviation 0.0163997498629
+Mean 0.50461416856 Standard Deviation 0.0207796178082
+Mean 0.511776668972 Standard Deviation 0.0243216313063
+Mean 0.513783223002 Standard Deviation 0.0242712949416
+Mean 0.518088627606 Standard Deviation 0.0200121544123
+Mean 0.520951487007 Standard Deviation 0.018938370051
+Mean 0.512054144847 Standard Deviation 0.0267920472735
+Mean 0.514923591213 Standard Deviation 0.026522594664
+Mean 0.520360306953 Standard Deviation 0.0280340325957
+Mean 0.516628791621 Standard Deviation 0.0278187810729
+Mean 0.512322563647 Standard Deviation 0.0279890571475
+Mean 0.515199420347 Standard Deviation 0.0243051608732
+Mean 0.517489213846 Standard Deviation 0.0263171491877
+Mean 0.512041794289 Standard Deviation 0.0260016131275
+Mean 0.515201067088 Standard Deviation 0.0280879637979
+Mean 0.521518789316 Standard Deviation 0.0268554040992
+Mean 0.520659190462 Standard Deviation 0.0279072601087
+Mean 0.512341501169 Standard Deviation 0.0264755986331
+Mean 0.509475348286 Standard Deviation 0.0263368735441
+Best DT:  (0.52151878931594375, 320)
+Number of samples, Number of features:  (3182, 45)
+Number of samples, Number of features:  (3182, 1)
+K: 20
+Using Decision Trees
+Mean 0.508481693973 Standard Deviation 0.0136003307444
+Mean 0.500002957355 Standard Deviation 0.0230968217852
+Mean 0.507537311962 Standard Deviation 0.0139471423129
+Mean 0.505340983025 Standard Deviation 0.0217745973145
+Mean 0.499694406656 Standard Deviation 0.0230234935113
+Mean 0.503461091067 Standard Deviation 0.0191080195395
+Mean 0.502823288184 Standard Deviation 0.0161658945991
+Mean 0.505646576369 Standard Deviation 0.0229703172442
+Mean 0.521359988959 Standard Deviation 0.024385098196
+Mean 0.52104946669 Standard Deviation 0.0221493846782
+Mean 0.516974231581 Standard Deviation 0.0221867161048
+Mean 0.515712426805 Standard Deviation 0.018428207291
+Mean 0.514769030579 Standard Deviation 0.0176631954819
+Mean 0.513825634353 Standard Deviation 0.019018646826
+Mean 0.517284753849 Standard Deviation 0.0140615765654
+Mean 0.519486011711 Standard Deviation 0.0138899293952
+Mean 0.515397961397 Standard Deviation 0.0172285373415
+Mean 0.51571144102 Standard Deviation 0.0163453000198
+Mean 0.517598233473 Standard Deviation 0.0188316462415
+Best DT:  (0.52135998895920821, 180)

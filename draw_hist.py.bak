@@ -1,0 +1,96 @@
+from feat_props import *
+from collections import Counter
+from numpy import *
+import numpy as np
+from matplotlib import *
+import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
+from classify_utils import *
+from jdcommon import *
+
+def vecToArr(y):
+    m,n=shape(y)
+    if m != 1:
+        return array(y.T)[0]
+    else:
+        return array(y)[0]
+
+def drawHists(X, y, featProps, categories, outdir='feat_hists', histogram=False, 
+        loglog=False, linestyle='--', histbinsize=50):
+    labels = unique(y)
+    n, m = shape(X)
+    colors = ['r' + linestyle[0], 'b' + linestyle[0], 'g' + linestyle[0]]
+
+    for i in range(m):
+
+        f = plt.figure()
+        ax = f.add_subplot(111)
+        title = 'Frequency of ' + featProps[i][1]
+        if loglog:
+            title = title + ', loglog'
+        if histogram:
+            title = title + ', binned'
+
+        ax.set_title(title)
+        ax.set_xlabel(featProps[i][1])
+        ax.set_ylabel('Frequency')
+        #ax.set_ylim(0, int(len(y)))
+        mn = float(min(X[:, i]))
+        mx = float(max(X[:, i]))
+        rg = mx - mn;
+        ax.set_xlim(0.9*mn - 0.1*rg, mx*1.1) 
+
+        hists = []
+        for cat in range(len(categories)):
+            lab = labels[cat]
+            f1 = vecToArr(X[vecToArr(where(mat(y)==lab)[1]), i])
+            if len(f1) == 0:
+                continue
+            #val = ax.hist(f1, bins=mx, range=(0, mx), cumulative=False,  
+            #        normed=False, histtype='step', facecolor=colors[cat])
+            if histogram:
+                hist, bins = np.histogram(f1,bins = min(histbinsize, int(rg+1)))
+                #width = 0.7*(bins[1]-bins[0])
+                xaxis = (bins[:-1]+bins[1:])/2 
+                yaxis = hist
+            else:
+                ct = matrix(Counter(f1).items())
+                xaxis = vecToArr(ct[:, 0])
+                yaxis = vecToArr(ct[:, 1])
+
+            if loglog:
+                val = plt.loglog(xaxis, yaxis, colors[cat])
+            else: 
+                val = plt.plot(xaxis, yaxis, colors[cat])
+                        
+            hists.append(val)
+            ax.grid(True)
+        ax.legend(categories)
+        filename = outdir + "/" + featProps[i][0]
+        if histogram:
+            filename += "_hist"
+        if loglog:
+            filename += "_loglog"
+        filename += '_' + linestyle[1]
+        f.savefig(filename)
+
+if __name__ == "__main__":
+    X = mc.get('X_Control')
+    y = mc.get('y_Control')
+    if(True or X == None):
+        X, y = getControlFiles()
+        mc['X_Control'] = X
+        mc['y_Control'] = y
+    else:
+        print "Using X and y from memcached"
+
+    for h in [True, False]:
+        for ll in [True, False]:
+            for ls in [('--','dashline',), (':', 'dotline'), ('x', 'xmark'), ('.', 'dotmark')]:
+                print "Histogram: ",h," LogLog: ",ll," Linestyle: ",ls
+                drawHists(mat(X), y, featProps, user_categories, histogram=h, loglog=ll, linestyle=ls)
+
+def test():
+    drawHists(matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [-1, 1, 1], 
+            [('feat1', 'feat1desc'), ('feat2', 'feat2desc'), ('feat3', 'Feat 3 desc')],
+            ['Negative 1', 'Positive 1'])

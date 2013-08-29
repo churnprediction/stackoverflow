@@ -1,0 +1,9 @@
+select count(*) from control_users where answering_speed = -1;
+
+update control_users set answering_speed = -1 where answering_speed is null;
+
+update control_users set tot_rep_co_posters = 0 where tot_rep_co_posters is null;
+
+update control_users set relative_rank_pos = -1 where relative_rank_pos is null;
+
+update control_users set num_posts_month = 1 where num_posts_month > 6;

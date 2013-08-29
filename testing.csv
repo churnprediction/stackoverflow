@@ -1,0 +1,2 @@
+uid,pid,creationdate,posttypeid,upvotes,downvotes,accepted,favorites,deleted,score,parent_qid,tot_answers,rank_answer,relative_rank_pos,accepted_by_orig,answer_time,num_comments,tot_rep_co_posters,post_length,fifth_post
+9,6,"2008-07-31 22:08:08",1,43,0,0,NULL,NULL,43,NULL,NULL,NULL,NULL,NULL,NULL,5,5310,605,0

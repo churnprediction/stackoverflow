@@ -1,0 +1,26 @@
+T:  7
+2013-08-22 02:50:29.102043 : Reading X,y from data/y_X_churn_time_T_7.csv
+2013-08-22 02:50:48.672853 : Done reading
+Number of features (300000, 26)
+(SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='rbf', probability=False, shrinking=True, tol=0.001,
+  verbose=False), 'SVC')
+2013-08-22 02:50:48.709349 : Performing classification
+2013-08-22 02:50:48.709392 : Fetching cv params
+2013-08-22 02:50:48.709518 : Returning cv params
+2013-08-22 02:50:48.709531 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': array([  1.00000000e-04,   1.00000000e+04])}, 'SVC': {'C': array([  1.00000000e-04,   1.00000000e+04]), 'gamma': array([  1.00000000e-04,   1.00000000e+04])}, 'LinSVC': {'C': array([  1.00000000e-04,   1.00000000e+04])}}
+2013-08-22 02:50:49.656026 : Performing a Grid Search
+2013-08-22 02:50:49.656129 : Best params
+2013-08-22 02:50:49.656141 : Best estimator
+2013-08-22 02:50:49.656148 : GridSearchCV(cv=sklearn.cross_validation.StratifiedKFold(labels=[-1. -1. ...,  1.  1.], k=10),
+       estimator=SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel=rbf, probability=False, shrinking=True, tol=0.001, verbose=False),
+       estimator__C=1.0, estimator__cache_size=200,
+       estimator__class_weight=None, estimator__coef0=0.0,
+       estimator__degree=3, estimator__gamma=0.0, estimator__kernel=rbf,
+       estimator__probability=False, estimator__shrinking=True,
+       estimator__tol=0.001, estimator__verbose=False, fit_params={},
+       iid=True, loss_func=None, n_jobs=1,
+       param_grid={'C': array([  1.00000e-04,   1.00000e+04]), 'gamma': array([  1.00000e-04,   1.00000e+04])},
+       pre_dispatch=2*n_jobs, refit=True, score_func=None, verbose=0)
+2013-08-22 02:50:49.657184 : Running CV

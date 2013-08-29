@@ -1,0 +1,80 @@
+2013-08-17 13:06:30.531588 : Reading X,y from data/y_X_churn_time_T_7.csv
+2013-08-17 13:06:40.436871 : Done reading
+T:  7
+Number of features (300000, 26)
+(DecisionTreeClassifier(compute_importances=False, criterion='gini',
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=1, min_samples_split=1, random_state=None), 'DT')
+2013-08-17 13:06:40.471025 : Performing classification
+2013-08-17 13:06:40.471061 : Fetching cv params
+2013-08-17 13:06:40.471107 : Returning cv params
+2013-08-17 13:06:40.471118 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-17 13:06:41.353816 : Performing a Grid Search
+2013-08-17 17:17:59.876787 : Best params
+{'compute_importances': True, 'min_samples_leaf': 200}
+2013-08-17 17:17:59.876894 : Best estimator
+DecisionTreeClassifier(compute_importances=True, criterion=gini,
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=200, min_samples_split=400,
+            random_state=<mtrand.RandomState object at 0x7f4ff7dff168>)
+2013-08-17 17:17:59.879327 : DecisionTreeClassifier(compute_importances=True, criterion=gini,
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=200, min_samples_split=400,
+            random_state=<mtrand.RandomState object at 0x7f4ff7dff168>)
+2013-08-17 17:17:59.879677 : Running CV
+2013-08-17 17:18:16.027622 : Done running CV
+Mean 0.706273333333 Standard Deviation 0.00188230355327
+2013-08-17 17:18:16.031864 : Done performing classification
+[ 0.70693333  0.70626667  0.70283333  0.70786667  0.7088      0.7083
+  0.70526667  0.7072      0.70583333  0.70343333]
+(LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty='l2', tol=0.0001), 'LR')
+2013-08-17 17:18:16.032766 : Performing classification
+2013-08-17 17:18:16.032811 : Fetching cv params
+2013-08-17 17:18:16.032874 : Returning cv params
+2013-08-17 17:18:16.032886 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-17 17:18:17.596661 : Performing a Grid Search
+2013-08-17 17:23:53.869106 : Best params
+{'penalty': 'l1', 'C': 0.125}
+2013-08-17 17:23:53.869206 : Best estimator
+LogisticRegression(C=0.125, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty=l1, tol=0.0001)
+2013-08-17 17:23:53.869458 : LogisticRegression(C=0.125, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty=l1, tol=0.0001)
+2013-08-17 17:23:53.869546 : Running CV
+2013-08-17 17:24:57.179639 : Done running CV
+Mean 0.6703 Standard Deviation 0.00234070264854
+2013-08-17 17:24:57.206918 : Done performing classification
+[ 0.6708      0.67213333  0.6683      0.67266667  0.67443333  0.66963333
+  0.67006667  0.66986667  0.66963333  0.66546667]
+(LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='l2', multi_class='ovr', penalty='l2',
+     tol=0.0001, verbose=0), 'LinSVC')
+2013-08-17 17:24:57.207819 : Performing classification
+2013-08-17 17:24:57.207866 : Fetching cv params
+2013-08-17 17:24:57.207935 : Returning cv params
+2013-08-17 17:24:57.207947 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-17 17:24:58.712475 : Performing a Grid Search
+2013-08-17 18:14:32.657137 : Best params
+{'C': 2.0}
+2013-08-17 18:14:32.657213 : Best estimator
+LinearSVC(C=2.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-17 18:14:32.657418 : LinearSVC(C=2.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-17 18:14:32.657509 : Running CV
+2013-08-17 18:20:27.851598 : Done running CV
+Mean 0.669663333333 Standard Deviation 0.00236048253071
+2013-08-17 18:20:27.862703 : Done performing classification
+[ 0.67        0.67236667  0.66886667  0.6719      0.67323333  0.66793333
+  0.66966667  0.66826667  0.66973333  0.66466667]
+(SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='rbf', probability=False, shrinking=True, tol=0.001,
+  verbose=False), 'SVC')
+2013-08-17 18:20:27.863535 : Performing classification
+2013-08-17 18:20:27.863574 : Fetching cv params
+2013-08-17 18:20:27.863630 : Returning cv params
+2013-08-17 18:20:27.863641 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-17 18:20:29.274101 : Performing a Grid Search

@@ -1,0 +1,7 @@
+select k, churner, avg(num_answers/k) from churn_users
+    GROUP BY k, churner 
+    ORDER BY k, churner;
+
+select k, churner, stddev(num_answers/k) from churn_users
+    GROUP BY k, churner 
+    ORDER BY k, churner;

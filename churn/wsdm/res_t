@@ -1,0 +1,24 @@
+Number of features (300000, 26)
+Performing a Grid Search
+Best params
+{'C': 2.0}
+Mean 0.6696 Standard Deviation 0.00283105790984
+[ 0.66966667  0.67223333  0.6689      0.67176667  0.67396667  0.66633333
+  0.6689      0.66993333  0.67073333  0.66356667]
+All Done!! Have a great day
+Number of features (300000, 26)
+Performing a Grid Search
+Best params
+{'C': 2.0}
+Mean 0.69901 Standard Deviation 0.00118115292076
+[ 0.6983      0.69733333  0.6993      0.69773333  0.6978      0.6991
+  0.70096667  0.7         0.70063333  0.69893333]
+All Done!! Have a great day
+Number of features (300000, 26)
+Performing a Grid Search
+Best params
+{'C': 2.0}
+Mean 0.725456666667 Standard Deviation 0.00176509678677
+[ 0.72523333  0.7281      0.72316667  0.72303333  0.72676667  0.7268
+  0.72796667  0.7247      0.72396667  0.72483333]
+All Done!! Have a great day

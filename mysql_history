@@ -1,0 +1,458 @@
+show tables;
+use jagat
+use jpudipeddi
+create database jagat;
+show tables;
+use jagat;
+create database jagat;
+create database jagat1;
+show tables;
+use jagat
+quit()
+;
+show tables;
+select count(*) from users;
+select count(*) from votes;
+truncate table prol_users;
+drop table prol_users;
+select count(*) from prol_users;
+unlock tables;
+describe prol_users;
+update prol_users set postcount=2 where id=2;
+rollback;
+commit;
+update prol_users set postcount=2 where id=2;
+rollback;
+update prol_users set postcount=2 where id=2;
+unlock tables;
+update prol_users set postcount=2 where id=2;
+lock table prol_users;
+lock prol_users;
+show processlist;
+remove process 3/19/2013
+Subash Kumar Saladi
+5-244/1 rd Street Venkateswar
+Naga Rajahmundry E Godavarari
+, 
+Thank you for your interest in the University of North Carolina at Charlotte. The admissions committee for the Computer Science - MS program carefully reviewed your application and supporting documentation. The committee considered several factors in addition to your academic background, including the competitiveness of the incoming class, having an adequate match between an applicant and the program faculty’s interest, or that an applicant is sufficiently prepared for Graduate School. Each term there are many highly qualified applicants for a limited number of openings in this program and, unfortunately, we are unable to offer you admission to the Graduate School at this time.
+Best wishes in your future endeavors and thank you again for your interest in graduate study at the University of North Carolina at Charlotte.
+show innodb status
+;
+show processlist;
+kill 73;
+show processlist;
+update prol_users set postcount=2 where id=2;
+show processlist;
+drop table prol_users;
+commit;
+quit()
+;
+quit;
+drop table prol_users;
+commit;
+show processlist
+;
+select count(*) from prol_users where fifth_post is not null;
+quit()
+;
+select count(*) from prol_users where fifth_post is not null;
+quit;
+clear
+select count(*) from prol_users where postcount >= 50;
+describe votes;
+select * from votetypes
+select count(*) from prol_users where postcount >= 50;
+show processlist
+;
+show processlist
+;
+select count(*) from prol_users;
+select (select count(*) from prol_users) from 1;
+select (select count(*) from prol_users);
+select (select count(*) from prol_users, select count(*) from prol_users where postcount >= 50);
+select (select count(*) from prol_users, select count(*) from prol_users where postcount >= 50) where 1=1;
+select (select count(*) from prol_users where postcount >= 50) where 1=1;
+select (select count(*) from prol_users where postcount >= 50);
+select (select count(*) from prol_users, select count(*) from prol_users where postcount >= 50);
+select (select count(*) from prol_users where postcount >= 50);
+select (select count(*) from prol_users where postcount >= 50 and id = p.id) from prol_users p where id = 2;
+select (select count(*) from prol_users where id = p.id) from prol_users p where id = 2;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) from prol_users where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) from prol_users p where postcount >= 50;
+create index idx_ouid on posts(owneruserid);
+select count(p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1)) from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) from prol_users p where postcount >= 50;
+select p.id, (select id, creationdate from posts where owneruserid = p.id order by creationdate limit 49,1) from prol_users p where postcount >= 50;
+select u.id,  p.id, p.creationdate from posts p, prol_users u where p.owneruserid = u.id and u.postcount >= 50 order by creationdate\c;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) as post50date, (select id from posts where owneruserid = p.id order by creationdate limit 4,1) as post5id, (select creationdate from posts where id = post5id) as post5date from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 4,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 4,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) from prol_users p where postcount >= 50;
+create index idx_ouid on posts(owneruserid);\c
+show index on posts;
+show index from posts;
+drop index idx_ouid;
+delete index posts(idx_ouid);
+drop index posts(idx_ouid);
+drop index idx_ouid on posts;
+create index idx_creationdate_owneruserid on posts(creationdate, owneruserid)
+;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 4,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 4,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 50,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 10,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 9,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 10,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 9,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 10,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+show index on posts;
+show index from posts;
+drop index idx_creationdate_owneruserid on posts;
+create index idx_creationdate_owneruserid on posts(owneruserid, creationdate);
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 10,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 9,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+analyze table posts;
+analyze table prol_users;
+ select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 9,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+describe posts;
+SELECT p.id, t2.post5id, t2.creationdate 
+FROM prol_users p 
+JOIN (SELECT id AS post5id, creationdate 
+FROM posts 
+WHERE owneruserid = p.id 
+ORDER BY creationdate 
+LIMIT 4, 1) AS t2 
+WHERE postcount >= 50;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p  JOIN (SELECT id AS post5id, creationdate  FROM posts  WHERE owneruserid = p.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p, (SELECT id AS post5id, creationdate  FROM posts  WHERE owneruserid = ;lfkda;fdlkasd.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50 and p.;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p  JOIN (SELECT id AS post5id, creationdate  FROM posts  WHERE owneruserid = prol_users.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p  JOIN (SELECT id AS post5id, creationdate  FROM posts  having owneruserid = p.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p  JOIN (SELECT id AS post5id, creationdate  FROM posts  having posts.owneruserid = p.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p  JOIN (SELECT id AS post5id, creationdate  FROM posts  where owneruserid = p.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p, (SELECT id AS post5id, creationdate  FROM posts  where owneruserid = p.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50 and p.id = t2.post5id;
+SELECT p.id, t2.post5id, t2.creationdate  FROM prol_users p, (SELECT id AS post5id, creationdate  FROM posts  where owneruserid inlkfjdalkfd p.id  ORDER BY creationdate  LIMIT 4, 1) AS t2  WHERE postcount >= 50 and p.id = t2.post5id;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 1,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+select count(*) from ( select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 1,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50);
+select count(*) from ( select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 1,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50) 
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 1,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,2) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,5) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select pid from (select id from posts where owneruserid = p.id order by creationdate limit 5,10) p2 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 1,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 1,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p3.id order by creationdate limit 5,10) as p2 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p.id order by creationdate limit 5,10) as p2 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p3.id order by creationdate limit 5,10),p.id p3 as p2 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p3.id order by creationdate limit 5,10) as p2, p.id as p3 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p3.id order by creationdate limit 5,10) as p2, (select p.id) as p3 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p3.id order by creationdate limit 5,10) as p2, (select p.id as id) as p3 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p3.id1 order by creationdate limit 5,10) as p2, (select p.id as id1) as p3 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+ select p.id, (select p2.id from (select id, creationdate from posts where owneruserid = p3.id1 order by creationdate limit 5,10) p2, (select p.id as id1) p3 having p2.creationdate = min(p2.creationdate)) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+select id, creationdate from posts where owneruserid=2 order by creationdate;
+select id, creationdate from posts where owneruserid=3 order by creationdate;
+select id, creationdate from posts where owneruserid=4 order by creationdate;
+ select p.id, (select min(id) from posts where owneruserid = p.id order by creationdate limit 5,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select min(id) from posts where owneruserid = p.id order by creationdate limit 5,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select min(id) from posts where owneruserid = p.id order by creationdate limit 5,50) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,10) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, t2.id, t2.creationdate from (select id, creationdate from posts where owneruserid = p.id order by creationdate limit 5,10) t2,  prol_users p where postcount >= 50;
+force index idx_creationdate_owneruserid;
+explain  select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50 use index idx_creationdate_owneruserid;
+explain  select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 50,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 5,1 force index idx_owneruserid) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select id from posts force index idx_owneruserid where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select id from posts force index (idx_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+show index from posts;
+explain  select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+  select p.id, (select id from posts force index (idx_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+explain  select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+  select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+  sefdaoifhjodajslect p.id, (select id from posts force index (idx_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+describe votes;
+select * from votetypes
+;
+select uid, sum(upmod)flkjdalkfsjdal;s  (select p.id uid, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50)
+select (select count(
+select (select count(*) from votes where postid in (p)) from (select id from posts where owneruserid = 2);
+select (select count(*) from votes where postid in (p)) from (select id from posts where owneruserid = 2) p;
+select (select count(*) from votes where postid in (p.id)) from (select id from posts where owneruserid = 2) p;
+explain select (select count(*) from votes where postid in (p.id)) from (select id from posts where owneruserid = 2) p;
+select count(*) from votes where postid in (select id from posts where owneruserid = 2);
+show index from votes;
+explain select count(*) from votes where postid in (select id from posts where owneruserid = 2);
+explain select count(*) from votes where postid in (select id from posts force index(idx_owneruserid) where owneruserid = 2);
+ select count(*) from votes where postid in (select id from posts force index(idx_owneruserid) where owneruserid = 2);
+select count(*) from votes where postid=2;
+select count(*) from votes where postid=;
+select count(*) from votes where postid=100000;
+ select count(*) from votes where postid in (1, 2);
+ select count(*) from votes where postid in (select id from posts force index(idx_owneruserid) where owneruserid = 2fdasfd
+;
+select id from posts force index(idx_owneruserid) where owneruserid = 2;
+ select count(*) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid;
+ select count(*) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid = 2;
+ select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by votetypeid;
+ select t2.posttypeid, votetypeid, count(posttypeid, votetypeid) from votes, (select id, posttypeid from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by posttypeid, votetypeid;
+ select t2.posttypeid, votetypeid, count(posttypeid, votetypeid) from votes, (select id, posttypeid from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by t2.posttypeid, votetypeid;
+ select t2.posttypeid, votetypeid, count(posttypeid, votetypeid) from votes, (select id, posttypeid from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by (t2.posttypeid, votetypeid);
+ select t2.posttypeid, votetypeid, count(*) from votes, (select id, posttypeid from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by (t2.posttypeid, votetypeid);
+ select t2.posttypeid, votetypeid, count(votetypeid) from votes, (select id, posttypeid from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by (t2.posttypeid, votetypeid);
+ select t2.posttypeid, votetypeid, count(votetypeid) from votes, (select id, posttypeid from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by (votetypeid, posttypeid);
+ select count(*) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid = 2;
+ select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 2) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by votetypeid;
+ select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 173) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by votetypeid;
+ select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 1) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) group by votetypeid;
+select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = " + str(uid) + " and posttypeid = 1) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) and postid <=  group by votetypeidfdfdafds
+;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) as post50date from prol_users p where postcount >= 50 and p.id = 1;
+select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = " + str(uid) + " and posttypeid = 1) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) and postid <= select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) as post50date from prol_users p where postcount >= 50 group by votetypeid;
+select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = " + str(uid) + " and posttypeid = 1) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) and postid <= 170072 group by votetypeid;
+select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 2 and posttypeid = 1) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) and postid <= 170072 group by votetypeid;
+select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 1 and posttypeid = 1) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) and postid <= 170072 group by votetypeid;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) as post50date from prol_users p where postcount >= 50 and p.id = 1;
+select votetypeid, count(votetypeid) from votes, (select id from posts force index(idx_owneruserid) where owneruserid = 1 and posttypeid = 1) t2 where t2.id = votes.postid and votes.votetypeid in(1, 2, 3) and postid <= 170072 group by votetypeid;
+select * from votetypes;
+select * from posttypes;
+  select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+show index from votes;
+select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) as post50date from prol_users p where postcount >= 50;
+describe user50;
+create index idx_u50postId on user50(post50id);
+show index from posts;
+create index idx_owneruserid_postid on posts(owneruserid, postid);
+create index idx_owneruserid_postid on posts(owneruserid, id);
+show processlist
+;
+quit()
+;
+quit;
+show processlist
+show processlist;
+create index idx_owneruserid_postid on posts(owneruserid, id);
+show index from posts;
+quit()
+;
+quit;
+describe user50;
+create table user5(uid int(11), post5id int(11), post5date datetime);
+describe user50;
+insert into user5 select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 4,1) as post005id, (select creationdate from posts where id = post005id) as post005date from prol_users p where postcount >= 50"
+lkjfdalskjfd
+;
+"
+insert into user5 select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 4,1) as post005id, (select creationdate from posts where id = post005id) as post005date from prol_users p where postcount >= 50;
+show processlist;
+  select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 5,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+  select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id order by creationdate limit 1,1) as post5id, (select creationdate from posts where id = post5id) from prol_users p where postcount >= 50;
+desc user5;
+insert into user5_month select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id and date <= date_add(u5.post5date, INTERVAL 1 MONTH) order by creationdate desc limit 0,1) as post005id, (select creationdate from posts where id = post005id) as post005date from prol_users p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) != 0; 
+insert into user5_month select p.id, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id and creationdate <= date_add(u5.post5date, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0; 
+create table user5_month(uid int(11), post5monthid int(11), post5monthdate datetime);
+insert into user5_month select p.id, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id and creationdate <= date_add(u5.post5date, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0; 
+insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id and creationdate <= date_add(u5.post5date, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0; 
+insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(u5.post5date, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0; 
+insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5monthdate, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0; 
+ insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5monthdate, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0;
+select p.post5monthdate from user5 p;
+select p.post5monthdate from user5_month p;
+ insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5monthdate, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5_month p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0;
+ insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5monthdate, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5_month p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5monthdate, INTERVAL 1 MONTH)) > 0;
+ insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5monthdate, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5_month p where (select count(*) from posts where owneruserid = p.uid and creationdate > date_add(u5.post5monthdate, INTERVAL 1 MONTH)) > 0;
+select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5monthdate, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5_month p where (select count(*) from posts where owneruserid = p.uid and creationdate > date_add(p.post5monthdate, INTERVAL 1 MONTH)) > 0; 
+select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5monthdate, INTERVAL 1 MONTH)fdaf
+;
+ insert into user5_month select p.uid, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.uid and creationdate <= date_add(p.post5date, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.uid and creationdate > date_add(p.post5date, INTERVAL 1 MONTH)) > 0;  
+clear
+clear fldkaf
+;
+show tables;
+describe user5_month;
+describe user5;
+select count(*) from user5;
+select count(*) from user5_month;
+show tables;
+select count(*) from prol_users;
+insert into user5_month select p.id, (select id from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id and date <= date_add(u5.post5date, INTERVAL 1 MONTH) order by creationdate desc limit 0,1) as post005id, (select creationdate from posts where id = post005id) as post005date from prol_users p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) != 0;
+insert into user5_month select p.id, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id and creationdate <= date_add(u5.post5date, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0;
+desc prol_users;
+create view prol_users_quartiles as select id, fifth_post, num_posts_month from prol_users where num_posts_month <= 1 or num_posts_month > 7;
+select * from prol_users_quartiles;
+select id, fifth_post, num_posts_month from prol_users where num_posts_month <= 1 or num_posts_month > 7;
+select * from num_posts_month;
+select * from prol_users where num_posts_month is not null;
+select * from prol_users where fifth_post is not null;
+select * from prol_users where postcount is not null;
+explain update prol_users u set u.fifth_post = (select creationdate from posts where owneruserid=u.id order by creationdate limit 4,1);
+explain update prol_users u set u.fifth_post = (select creationdate from posts where owneruserid=u.id order by creationdate limit 4,1));
+explain update prol_users  set fifth_post = (select creationdate from posts where owneruserid=id order by creationdate limit 4,1);
+explain update prol_users,  set fifth_post = (select creationdate from posts where owneruserid=id order by creationdate limit 4,1);
+explain update prol_users  set fifth_post = 1;
+ update prol_users  set fifth_post = 1;
+explain update prol_users  set fifth_post = 1;
+ update prol_users  set fifth_post = 1;
+explain update prol_users  set fifth_post = 1;
+explain select p.id, (select id from posts where owneruserid = p.id order by creationdate limit 49,1) as post50id, (select creationdate from posts where id = post50id) from prol_users p where postcount >= 50;
+explain select * from prol_users;
+update prol_users,  set fifth_post = (select creationdate from posts where owneruserid=id order by creationdate limit 4,1);
+update prol_users  u set fifth_post = (select creationdate from posts where owneruserid=u.id order by creationdate limit 4,1);
+explain update prol_users  u set fifth_post = (select creationdate from posts where owneruserid=u.id order by creationdate limit 4,1);
+show index from posts;
+ update prol_users  set fifth_post = null;
+update prol_users  u set fifth_post = (select creationdate from posts force index(idx_creationdate_owneruserid) where owneruserid=u.id order by creationdate limit 4,1);
+quit;
+update prol_users  u set fifth_post = (select creationdate from posts force index(idx_creationdate_owneruserid) where owneruserid=u.id order by creationdate limit 4,1);
+show processlist;
+select count(*) from prol_users where fifth_post is not null;
+describe user5;
+insert into user5_month select p.id, (select max(id) from posts force index (idx_creationdate_owneruserid) where owneruserid = p.id and creationdate <= date_add(u5.post5date, INTERVAL 1 MONTH)) as post005id, (select creationdate from posts where id = post005id) as post005date from user5 p where (select count(*) from posts where owneruserid = p.id and creationdate > date_add(u5.post5date, INTERVAL 1 MONTH)) > 0;
+desc prol_users;
+alter table prol_users modify fifth_post int(11);
+desc prol_users;
+update prol_users  u set fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid=u.id order by creationdate limit 4,1);
+show processlist;
+update prol_users  u set fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid=u.id order by creationdate limit 4,1);
+update prol_users  u set fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid=1 order by creationdate limit 4,1);
+update prol_users  u set fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid=u.id order by creationdate limit 4,1);
+explain update prol_users  u set fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid=u.id order by creationdate limit 4,1);
+update prol_users  u set fifth_post = (select id from posts force index(idx_creationdate_owneruserid) where owneruserid=u.id order by creationdate limit 4,1);
+update prol_users u set u.num_posts_month = (select count(*) from posts where owneruserid = u.id and creationdate > u.fifth_post and creationdate < date_add(u.fifth_post, INTERVAL 1th));
+update prol_users u set u.num_posts_month = (select count(*) from posts where owneruserid = u.id and creationdate > u.fifth_post and creationdate < date_add(u.fifth_post, INTERVAL 1 month));
+show processlist
+;
+kill 137
+;
+kill 138;
+update prol_users u set u.num_posts_month = (select count(*) from posts force index(idx_creationdate_owneruserid) where owneruserid = u.id and creationdate > u.fifth_post and creationdate < date_add(u.fifth_post, INTERVAL 1 month));
+show processlist
+;
+desc prol_usrs;
+desc prol_users;
+insert into prol_users(id, postcount)  select owneruserid, count(id) from posts force index(idx_owneruserid) group by owneruserid having count(id) >= 5;
+commit;
+select count(*) from prol_users;
+select count(*) from (select ownueruserid, count(id) from posts force index(idx_owneruserid) having count(id) >=5);
+select count(*) from (select ownueruserid, count(id) from posts force index(idx_owneruserid) having count(id) >=5) dr;
+select count(*) from (select owneruserid, count(id) from posts force index(idx_owneruserid) having count(id) >=5) dr;
+select count(*) from (select owneruserid, count(id) from posts force index(idx_owneruserid) having count(id) >=5 group by owneruserid) dr;
+show erros;
+show errors;
+select count(*) from (select owneruserid, count(id) from posts force index(idx_owneruserid) group by owneruserid having count(id) >= 5) dr;
+describe prol_users;
+select count(*) from prol_users where postcount = null;
+select count(*) from prol_users where postcount = 0;
+select count(*) from prol_users where postcount = <1;
+select count(*) from prol_users where postcount <1;
+select count(*) from prol_users where postcount 01;
+select count(*) from prol_users where postcount =1;
+select count(*) from prol_users where postcount =2;
+select distinct postcount from prol_users;
+select count(*) from prol_users where postcount =5;
+update prol_users u set u.num_posts_month = (select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month));
+select count(*) from prol_users;
+desc prol_users;
+select * from prol_users where postcount=null or fifth_post=null or num_posts_month=0;
+update prol_users pu set pu.fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid = pu.id order by id limit 4, 1) where pu.fifth_post=null;
+select * from prol_users where fifth_post = null;
+select * from prol_users where postcount=null or fifth_post=null or num_posts_month=0;
+select * from prol_users where postcount=null or fifth_post=null or num_posts_month=0 limit 0, 1;
+select * from prol_users where fifth_post = null;
+select * from prol_users where fifth_post is null;
+update prol_users pu set pu.fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid = pu.id order by id limit 4, 1) where pu.fifth_post is null;
+update prol_users u set u.num_posts_month = (select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month)) where postcount=5;
+select * from prol_users where postcount=null or fifth_post=null or num_posts_month=0;
+select * from prol_users where postcount=null or fifth_post=null or num_posts_month is null;
+select * from prol_users where postcount is null or fifth_post is null or num_posts_month is null;
+update prol_users pu set fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid=0 ordery by id limit 4, 1);
+update prol_users pu set fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid=0 order by id limit 4, 1);
+update prol_users pu set pu.fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid = pu.id order by id limit 4, 1);
+select * from prol_users where postcount is null or fifth_post is null or num_posts_month is null;
+update prol_users pu set fifth_post = (select id from posts force index(idx_owneruserid) where id= pu.id order by id limit 4, 1) where pu.id = 0;
+select id from posts force index(idx_owneruserid) where id= pu.id order by id limit 4, 1;
+select id from posts force index(idx_owneruserid) where id=0 order by id limit 4, 1;
+select id from posts force index(idx_owneruserid) where owneruserid=0 order by id limit 4, 1;
+select id from posts force index(idx_owneruserid) where owneruserid=0 order by id limit 4, 20;
+select count(*) from posts where ownueruserid=0;
+select count(*) from posts where owneruserid=0;
+select * from prol_users where id = 0;
+delete from prol_users;
+select * from prol_users ;
+select count(*) from prol_users;
+insert into prol_users(id, postcount)  select owneruserid, count(id) from posts force index(idx_owneruserid) group by owneruserid having count(id) >= 5;
+select count(*) from posts where owneruserid = null;
+select count(*) from posts where id = null;
+select count(*) from (  select owneruserid, count(id) from posts force index(idx_owneruserid) group by owneruserid having count(id) >= 5);
+select count(*) from (  select owneruserid, count(id) from posts force index(idx_owneruserid) group by owneruserid having count(id) >= 5) dr;
+update prol_users pu set pu.fifth_post = (select id from posts force index(idx_owneruserid) where id= pu.id order by id limit 4, 1);
+show processlist;
+update prol_users pu set pu.fifth_post = (select id from posts force index(idx_owneruserid) where owneruserid= pu.id order by id limit 4, 1);
+select count(*) from prol_users where fifth_post is null;
+select * from prol_users where fifth_post is null;
+ select owneruserid, count(id) from posts force index(idx_owneruserid) group by owneruserid having count(id) >= 5 where owneruserid=0;
+ select owneruserid, count(id) from posts force index(idx_owneruserid) where owneruserid = 0 group by owneruserid  having count(id) >= 5 ;
+ select owneruserid, count(id) from posts force index(idx_owneruserid) where owneruserid is null group by owneruserid  having count(id) >= 5 ;
+select * into community_posts from posts force index(idx_owneruserid) where owneruserid is null;
+create table community_posts select * from  posts force index(idx_owneruserid) where owneruserid is null;
+select count(*) from community_posts;
+delete from posts where owneruserid is null;
+delete from prol_uses where id <= 0;
+delete from prol_users where id <= 0;
+community;
+commit;
+select count(*) from prol_users;
+select * from users where id  = -1;
+commit;
+update prol_users u set u.num_posts_month = (select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month));
+select * from prol_users where postcount is null or fifth_post is null or num_posts_month is null;
+desc prol_users;
+
+select count(*) from prol_users where num_posts_month = 0;
+select count(*) from prol_users where num_posts_month = 1;
+select count(*) from prol_users where postcount = 5;
+select * from prol_users limit 1, 5;
+select * from prol_users limit 1, 5 where postcount=5; 
+select * from prol_users where postcount=5 limit 1, 5; 
+select id from posts where owneruserid=9 order by id limit 1, 10;
+select * from prol_users limit 1, 5;
+select id from posts where owneruserid=9 order by id limit 1,5;
+select id from posts where owneruserid=9 order by id limit 0,5;
+select * from prol_users limit 0, 50;
+select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = 9 and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month)
+;
+select count(*) from posts p,prol_users u force index(idx_creationdate_owneruserid) where owneruserid = 9 and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month)
+;
+select count(*) from prol_users u, posts p force index(idx_creationdate_owneruserid) where owneruserid = 9 and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month);
+select count(*) from prol_users u, posts p force index(idx_creationdate_owneruserid) where owneruserid = 9 and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month) where p.owneruserid = u.id;
+select count(*) from prol_users u, posts p force index(idx_creationdate_owneruserid) where owneruserid = 9 and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month) and p.owneruserid = u.id;
+select * from prol_users where id = 9;
+select creationdate from posts where id=155;
+date_add('2008-08-01 17:47:54', INTERVAL 1 MONTH)
+;
+select date_add('2008-08-01 17:47:54', INTERVAL 1 MONTH) from 1;
+select date_add('2008-08-01 17:47:54', INTERVAL 1 MONTH) ;
+select id from posts force index(idx_creationdate_owneruserid) where owneruserid = 9 and createiondate < select date_add('2008-08-01 17:47:54', INTERVAL 1 MONTH) ;
+select id from posts force index(idx_creationdate_owneruserid) where owneruserid = 9 and createiondate < (select date_add('2008-08-01 17:47:54', INTERVAL 1 MONTH)) ;
+select id from posts force index(idx_creationdate_owneruserid) where owneruserid = 9 and creationdate < (select date_add('2008-08-01 17:47:54', INTERVAL 1 MONTH)) ;
+select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = 9 and p.id > 155 and p.creationdate < date_add((select creationdate from posts where id=155), INTERVAL 1 month)
+;
+select num_posts_month from prol_users where id = 9;
+update prol_users u set u.num_posts_month = (select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month));
+select num_posts_month from prol_users where id = 9;
+update prol_users u set u.num_posts_month = (select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month)) and u.id = 9;
+select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month)) where u.id = 9;
+
+update prol_users u, posts p force index(idx_owneruserid) set u.num_posts_month = (select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=p.id), INTERVAL 1 month)) and u.id = p.owneruserid;
+update prol_users u set u.num_posts_month = (select count(*) from posts p force index(idx_creationdate_owneruserid) where owneruserid = u.id and p.id > u.fifth_post and p.creationdate < date_add((select creationdate from posts where id=u.fifth_post), INTERVAL 1 month));
+select num_posts_month from prol_users where id = 9;
+commit;

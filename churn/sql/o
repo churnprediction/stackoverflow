@@ -1,0 +1,82 @@
+a.sql:UPDATE churn_users cu, posts p SET gap1 = p.gap_from_prev WHERE post_seq = 1 and cu.uid = p.owneruserid and cu.k = 1;
+a.sql:UPDATE churn_users cu, posts p SET gap10 = p.gap_from_prev WHERE post_seq = 10 and cu.uid = p.owneruserid and cu.k = 10;
+a.sql:UPDATE churn_users cu, posts p SET gap11 = p.gap_from_prev WHERE post_seq = 11 and cu.uid = p.owneruserid and cu.k = 11;
+a.sql:UPDATE churn_users cu, posts p SET gap12 = p.gap_from_prev WHERE post_seq = 12 and cu.uid = p.owneruserid and cu.k = 12;
+a.sql:UPDATE churn_users cu, posts p SET gap13 = p.gap_from_prev WHERE post_seq = 13 and cu.uid = p.owneruserid and cu.k = 13;
+a.sql:UPDATE churn_users cu, posts p SET gap14 = p.gap_from_prev WHERE post_seq = 14 and cu.uid = p.owneruserid and cu.k = 14;
+a.sql:UPDATE churn_users cu, posts p SET gap15 = p.gap_from_prev WHERE post_seq = 15 and cu.uid = p.owneruserid and cu.k = 15;
+a.sql:UPDATE churn_users cu, posts p SET gap16 = p.gap_from_prev WHERE post_seq = 16 and cu.uid = p.owneruserid and cu.k = 16;
+a.sql:UPDATE churn_users cu, posts p SET gap17 = p.gap_from_prev WHERE post_seq = 17 and cu.uid = p.owneruserid and cu.k = 17;
+a.sql:UPDATE churn_users cu, posts p SET gap18 = p.gap_from_prev WHERE post_seq = 18 and cu.uid = p.owneruserid and cu.k = 18;
+a.sql:UPDATE churn_users cu, posts p SET gap19 = p.gap_from_prev WHERE post_seq = 19 and cu.uid = p.owneruserid and cu.k = 19;
+churn_create.sql:    add column gap1 int(11),
+churn_create.sql:    add column gap10 int(11),
+churn_create.sql:    add column gap11 int(11),
+churn_create.sql:    add column gap12 int(11),
+churn_create.sql:    add column gap13 int(11),
+churn_create.sql:    add column gap14 int(11),
+churn_create.sql:    add column gap15 int(11),
+churn_create.sql:    add column gap16 int(11),
+churn_create.sql:    add column gap17 int(11),
+churn_create.sql:    add column gap18 int(11),
+churn_create.sql:    add column gap19 int(11),
+churn_create.sql:  `gap1` int(11) DEFAULT NULL,
+churn_create.sql:  `gap10` int(11) DEFAULT NULL,
+churn_create.sql:  `gap11` int(11) DEFAULT NULL,
+churn_create.sql:  `gap12` int(11) DEFAULT NULL,
+churn_create.sql:  `gap13` int(11) DEFAULT NULL,
+churn_create.sql:  `gap14` int(11) DEFAULT NULL,
+churn_create.sql:  `gap15` int(11) DEFAULT NULL,
+churn_create.sql:  `gap16` int(11) DEFAULT NULL,
+churn_create.sql:  `gap17` int(11) DEFAULT NULL,
+churn_create.sql:  `gap18` int(11) DEFAULT NULL,
+churn_create.sql:  `gap19` int(11) DEFAULT NULL,
+churn_create.sql:  `gap1` ,
+churn_create.sql:  drop column `gap10` ,
+churn_create.sql:  drop column `gap11` ,
+churn_create.sql:  drop column `gap12` ,
+churn_create.sql:  drop column `gap13` ,
+churn_create.sql:  drop column `gap14`,
+churn_create.sql:  drop column `gap15`,
+churn_create.sql:  drop column `gap16`,
+churn_create.sql:  drop column `gap17` ,
+churn_create.sql:  drop column `gap18` ,
+churn_create.sql:  drop column `gap19` ,
+churn_features.sql:SELECT k, churner, AVG(gap1), AVG(gap2), AVG(gap3), 
+churn_features.sql:    AVG(gap9), AVG(gap10), AVG(gap11), AVG(gap12), AVG(gap13), 
+churn_features.sql:    AVG(gap14), AVG(gap15), AVG(gap16), AVG(gap17), AVG(gap18), 
+churn_features.sql:    AVG(gap19), AVG(gap20) FROM churn_users WHERE churner = 0 
+gen_sql_timegap.py:#print "UPDATE churn_users cu, posts p   SET gap1 = null, "
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap1 = p.gap_from_prev   WHERE p.post_seq = 1 and p.owneruserid = cu.uid and cu.k >= 1;              
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap10 = p.gap_from_prev   WHERE p.post_seq = 10 and p.owneruserid = cu.uid and cu.k >= 10;           
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap11 = p.gap_from_prev   WHERE p.post_seq = 11 and p.owneruserid = cu.uid and cu.k >= 11;           
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap12 = p.gap_from_prev   WHERE p.post_seq = 12 and p.owneruserid = cu.uid and cu.k >= 12;
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap13 = p.gap_from_prev   WHERE p.post_seq = 13 and p.owneruserid = cu.uid and cu.k >= 13;
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap14 = p.gap_from_prev   WHERE p.post_seq = 14 and p.owneruserid = cu.uid and cu.k >= 14;
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap15 = p.gap_from_prev   WHERE p.post_seq = 15 and p.owneruserid = cu.uid and cu.k >= 15;
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap16 = p.gap_from_prev   WHERE p.post_seq = 16 and p.owneruserid = cu.uid and cu.k >= 16;
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap17 = p.gap_from_prev   WHERE p.post_seq = 17 and p.owneruserid = cu.uid and cu.k >= 17;
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap18 = p.gap_from_prev   WHERE p.post_seq = 18 and p.owneruserid = cu.uid and cu.k >= 18;
+procedures.sql:        UPDATE churn_users cu, posts p   SET gap19 = p.gap_from_prev   
+procedures.sql:        `churn_users`.`gap1`,
+procedures.sql:        `churn_users`.`gap10`,
+procedures.sql:        `churn_users`.`gap11`,
+procedures.sql:        `churn_users`.`gap12`,
+procedures.sql:        `churn_users`.`gap13`,
+procedures.sql:        `churn_users`.`gap14`,
+procedures.sql:        `churn_users`.`gap15`,
+procedures.sql:        `churn_users`.`gap16`,
+procedures.sql:        `churn_users`.`gap17`,
+procedures.sql:        `churn_users`.`gap18`,
+procedures.sql:        `churn_users`.`gap19`,
+procedures.sql:        `churn_users`.`gap1`,
+procedures.sql:        `churn_users`.`gap10`,
+procedures.sql:        `churn_users`.`gap11`,
+procedures.sql:        `churn_users`.`gap12`,
+procedures.sql:        `churn_users`.`gap13`,
+procedures.sql:        `churn_users`.`gap14`,
+procedures.sql:        `churn_users`.`gap15`,
+procedures.sql:        `churn_users`.`gap16`,
+procedures.sql:        `churn_users`.`gap17`,
+procedures.sql:        `churn_users`.`gap18`,
+procedures.sql:        `churn_users`.`gap19`,

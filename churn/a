@@ -1,0 +1,28 @@
+    UPDATE churn_time_users cu, posts p, users u 
+        SET time_since_last_gap = 
+            timestampdiff(MINUTE, p.creationdate, 
+
+                DATE_ADD(u.creationdate, INTERVAL 7 DAY))
+        WHERE post_seq = cu.num_posts 
+
+            and cu.uid = p.owneruserid and cu.uid = u.id and cu.T = 7;
+
+    UPDATE churn_time_users cu, posts p, users u 
+        SET time_since_last_gap = 
+            timestampdiff(MINUTE, p.creationdate, 
+
+                DATE_ADD(u.creationdate, INTERVAL 15 DAY))
+        WHERE post_seq = cu.num_posts 
+
+            and cu.uid = p.owneruserid and cu.uid = u.id and cu.T = 15;
+
+
+    UPDATE churn_time_users cu, posts p, users u 
+        SET time_since_last_gap = 
+            timestampdiff(MINUTE, p.creationdate, 
+
+                DATE_ADD(u.creationdate, INTERVAL 30 DAY))
+        WHERE post_seq = cu.num_posts 
+
+            and cu.uid = p.owneruserid and cu.uid = u.id and cu.T = 30;
+

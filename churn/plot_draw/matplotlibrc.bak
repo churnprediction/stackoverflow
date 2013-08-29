@@ -1,0 +1,4 @@
+xtick.labelsize : 24
+ytick.labelsize : 24
+font.weight : 'bold'
+font.size : 30

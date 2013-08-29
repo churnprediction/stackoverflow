@@ -1,0 +1,118 @@
+T:  7
+2013-08-25 14:28:35.623658 : Reading X,y from data/y_X_churn_time_T_7.csv
+2013-08-25 14:28:45.265181 : Done reading
+Number of features (300000, 26)
+(SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='rbf', probability=False, shrinking=True, tol=0.001,
+  verbose=False), 'SVC')
+2013-08-25 14:28:45.292030 : Performing classification
+2013-08-25 14:28:45.292061 : Fetching cv params
+2013-08-25 14:28:45.292097 : Returning cv params
+2013-08-25 14:28:45.292103 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'SVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0], 'gamma': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'LinSVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}}
+2013-08-25 14:28:46.006331 : SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel=rbf, probability=False, shrinking=True, tol=0.001, verbose=False)
+2013-08-25 14:28:46.006519 : Running CV
+2013-08-25 23:38:15.577236 : Done running CV
+Mean 0.673733333333 Standard Deviation 0.00216420372834
+2013-08-25 23:38:15.585717 : Done performing classification
+[ 0.67013333  0.6762      0.67226667  0.67466667  0.67733333  0.67423333
+  0.67323333  0.67333333  0.6752      0.67073333]
+T:  15
+2013-08-25 23:38:15.586651 : Reading X,y from data/y_X_churn_time_T_15.csv
+2013-08-25 23:38:25.583335 : Done reading
+Number of features (300000, 26)
+(SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='rbf', probability=False, shrinking=True, tol=0.001,
+  verbose=False), 'SVC')
+2013-08-25 23:38:25.616801 : Performing classification
+2013-08-25 23:38:25.616830 : Fetching cv params
+2013-08-25 23:38:25.616871 : Returning cv params
+2013-08-25 23:38:25.616878 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'SVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0], 'gamma': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'LinSVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}}
+2013-08-25 23:38:26.367435 : SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel=rbf, probability=False, shrinking=True, tol=0.001, verbose=False)
+2013-08-25 23:38:26.367616 : Running CV
+2013-08-26 08:26:12.677080 : Done running CV
+Mean 0.706073333333 Standard Deviation 0.00152838331434
+2013-08-26 08:26:12.685485 : Done performing classification
+[ 0.70713333  0.70353333  0.70706667  0.7055      0.70326667  0.7079
+  0.7076      0.70666667  0.70656667  0.7055    ]
+T:  30
+2013-08-26 08:26:12.694735 : Reading X,y from data/y_X_churn_time_T_30.csv
+2013-08-26 08:26:22.969436 : Done reading
+Number of features (300000, 26)
+(SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='rbf', probability=False, shrinking=True, tol=0.001,
+  verbose=False), 'SVC')
+2013-08-26 08:26:23.002962 : Performing classification
+2013-08-26 08:26:23.002991 : Fetching cv params
+2013-08-26 08:26:23.003032 : Returning cv params
+2013-08-26 08:26:23.003038 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'SVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0], 'gamma': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'LinSVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}}
+2013-08-26 08:26:23.754655 : SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel=rbf, probability=False, shrinking=True, tol=0.001, verbose=False)
+2013-08-26 08:26:23.754838 : Running CV
+2013-08-26 14:10:17.558133 : Done running CV
+Mean 0.732933333333 Standard Deviation 0.00187207549705
+2013-08-26 14:10:17.566130 : Done performing classification
+[ 0.73343333  0.73483333  0.7309      0.73276667  0.73486667  0.73453333
+  0.735       0.72916667  0.7316      0.73223333]
+T:  7
+2013-08-26 14:10:17.575370 : Reading X,y from data/y_X_churn_time_T_7.csv
+2013-08-26 14:10:28.852781 : Done reading
+Number of features (300000, 26)
+(DecisionTreeClassifier(compute_importances=False, criterion='gini',
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=500, min_samples_split=1, random_state=None), 'DT')
+2013-08-26 14:10:28.887112 : Performing classification
+2013-08-26 14:10:28.887142 : Fetching cv params
+2013-08-26 14:10:28.887181 : Returning cv params
+2013-08-26 14:10:28.887188 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'SVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0], 'gamma': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'LinSVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}}
+2013-08-26 14:10:29.647996 : DecisionTreeClassifier(compute_importances=False, criterion=gini,
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=500, min_samples_split=1, random_state=None)
+2013-08-26 14:10:29.648166 : Running CV
+2013-08-26 14:10:38.267264 : Done running CV
+Mean 0.705926666667 Standard Deviation 0.00201051679371
+2013-08-26 14:10:38.276407 : Done performing classification
+[ 0.70716667  0.70753333  0.7024      0.70466667  0.7076      0.7081
+  0.70733333  0.7067      0.70526667  0.7025    ]
+T:  15
+2013-08-26 14:10:38.286818 : Reading X,y from data/y_X_churn_time_T_15.csv
+2013-08-26 14:10:49.664936 : Done reading
+Number of features (300000, 26)
+(DecisionTreeClassifier(compute_importances=False, criterion='gini',
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=500, min_samples_split=1, random_state=None), 'DT')
+2013-08-26 14:10:49.699010 : Performing classification
+2013-08-26 14:10:49.699039 : Fetching cv params
+2013-08-26 14:10:49.699081 : Returning cv params
+2013-08-26 14:10:49.699088 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'SVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0], 'gamma': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'LinSVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}}
+2013-08-26 14:10:50.454704 : DecisionTreeClassifier(compute_importances=False, criterion=gini,
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=500, min_samples_split=1, random_state=None)
+2013-08-26 14:10:50.454887 : Running CV
+2013-08-26 14:10:59.248145 : Done running CV
+Mean 0.72153 Standard Deviation 0.00193772203029
+2013-08-26 14:10:59.256705 : Done performing classification
+[ 0.7202      0.71963333  0.725       0.72056667  0.71983333  0.7232
+  0.72456667  0.71966667  0.72193333  0.7207    ]
+T:  30
+2013-08-26 14:10:59.266054 : Reading X,y from data/y_X_churn_time_T_30.csv
+2013-08-26 14:11:10.687653 : Done reading
+Number of features (300000, 26)
+(DecisionTreeClassifier(compute_importances=False, criterion='gini',
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=500, min_samples_split=1, random_state=None), 'DT')
+2013-08-26 14:11:10.721586 : Performing classification
+2013-08-26 14:11:10.721616 : Fetching cv params
+2013-08-26 14:11:10.721656 : Returning cv params
+2013-08-26 14:11:10.721663 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'SVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0], 'gamma': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}, 'LinSVC': {'C': [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]}}
+2013-08-26 14:11:11.480662 : DecisionTreeClassifier(compute_importances=False, criterion=gini,
+            max_depth=None, max_features=None, min_density=0.1,
+            min_samples_leaf=500, min_samples_split=1, random_state=None)
+2013-08-26 14:11:11.480837 : Running CV
+2013-08-26 14:11:20.354353 : Done running CV
+Mean 0.740493333333 Standard Deviation 0.00178504901893
+2013-08-26 14:11:20.363083 : Done performing classification
+[ 0.74076667  0.7424      0.74063333  0.7402      0.74326667  0.74006667
+  0.74263333  0.7393      0.73793333  0.73773333]
+All Done!! Have a great day

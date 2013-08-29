@@ -1,0 +1,6 @@
+@norm
+1
+Ctrl-C -- sending "KILL QUERY 1706" to server ...
+Ctrl-C -- query aborted.
+Ctrl-C -- sending "KILL 1706" to server ...
+Ctrl-C -- query aborted.

@@ -1,0 +1,165 @@
+T:  7
+2013-08-20 02:20:53.065818 : Reading X,y from data/y_X_churn_time_T_7.csv
+2013-08-20 02:21:02.998721 : Done reading
+Number of features (300000, 26)
+(LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty='l2', tol=0.0001), 'LR')
+2013-08-20 02:21:03.025276 : Performing classification
+2013-08-20 02:21:03.025307 : Fetching cv params
+2013-08-20 02:21:03.025346 : Returning cv params
+2013-08-20 02:21:03.025352 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-20 02:21:03.750327 : Performing a Grid Search
+2013-08-20 02:27:33.311830 : Best params
+{'penalty': 'l1', 'C': 1.0}
+2013-08-20 02:27:33.311907 : Best estimator
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty=l1, tol=0.0001)
+2013-08-20 02:27:33.312097 : LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty=l1, tol=0.0001)
+2013-08-20 02:27:33.312156 : Running CV
+2013-08-20 02:27:50.140933 : Done running CV
+Mean 0.670293333333 Standard Deviation 0.00243692885046
+2013-08-20 02:27:50.147073 : Done performing classification
+[ 0.6709      0.67226667  0.66806667  0.6727      0.67463333  0.6696
+  0.66996667  0.6698      0.66963333  0.66536667]
+T:  15
+2013-08-20 02:27:50.147662 : Reading X,y from data/y_X_churn_time_T_15.csv
+2013-08-20 02:28:01.217020 : Done reading
+Number of features (300000, 26)
+(LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty='l2', tol=0.0001), 'LR')
+2013-08-20 02:28:01.256131 : Performing classification
+2013-08-20 02:28:01.256162 : Fetching cv params
+2013-08-20 02:28:01.256209 : Returning cv params
+2013-08-20 02:28:01.256217 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-20 02:28:02.095332 : Performing a Grid Search
+2013-08-20 02:32:54.797810 : Best params
+{'penalty': 'l2', 'C': 0.0625}
+2013-08-20 02:32:54.797878 : Best estimator
+LogisticRegression(C=0.0625, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, penalty=l2, tol=0.0001)
+2013-08-20 02:32:54.798062 : LogisticRegression(C=0.0625, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, penalty=l2, tol=0.0001)
+2013-08-20 02:32:54.798147 : Running CV
+2013-08-20 02:33:02.575594 : Done running CV
+Mean 0.70074 Standard Deviation 0.00171961235942
+2013-08-20 02:33:02.582543 : Done performing classification
+[ 0.70026667  0.6996      0.70143333  0.6976      0.6989      0.70156667
+  0.70376667  0.7005      0.70283333  0.70093333]
+T:  30
+2013-08-20 02:33:02.589177 : Reading X,y from data/y_X_churn_time_T_30.csv
+2013-08-20 02:33:13.586817 : Done reading
+Number of features (300000, 26)
+(LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, penalty='l2', tol=0.0001), 'LR')
+2013-08-20 02:33:13.625381 : Performing classification
+2013-08-20 02:33:13.625412 : Fetching cv params
+2013-08-20 02:33:13.625454 : Returning cv params
+2013-08-20 02:33:13.625461 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-20 02:33:14.439352 : Performing a Grid Search
+2013-08-20 02:37:51.936674 : Best params
+{'penalty': 'l1', 'C': 0.0625}
+2013-08-20 02:37:51.936763 : Best estimator
+LogisticRegression(C=0.0625, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, penalty=l1, tol=0.0001)
+2013-08-20 02:37:51.936979 : LogisticRegression(C=0.0625, class_weight=None, dual=False,
+          fit_intercept=True, intercept_scaling=1, penalty=l1, tol=0.0001)
+2013-08-20 02:37:51.937066 : Running CV
+2013-08-20 02:38:25.348373 : Done running CV
+Mean 0.727336666667 Standard Deviation 0.00161055201027
+2013-08-20 02:38:25.359008 : Done performing classification
+[ 0.7272      0.72963333  0.72453333  0.728       0.7276      0.7285
+  0.72956667  0.72526667  0.7261      0.72696667]
+T:  7
+2013-08-20 02:38:25.371830 : Reading X,y from data/y_X_churn_time_T_7.csv
+2013-08-20 02:38:46.487562 : Done reading
+Number of features (300000, 26)
+(LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='l2', multi_class='ovr', penalty='l2',
+     tol=0.0001, verbose=0), 'LinSVC')
+2013-08-20 02:38:46.545282 : Performing classification
+2013-08-20 02:38:46.545320 : Fetching cv params
+2013-08-20 02:38:46.545379 : Returning cv params
+2013-08-20 02:38:46.545391 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-20 02:38:47.581160 : Performing a Grid Search
+2013-08-20 03:22:41.983258 : Best params
+{'C': 2.0}
+2013-08-20 03:22:41.983316 : Best estimator
+LinearSVC(C=2.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-20 03:22:41.983464 : LinearSVC(C=2.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-20 03:22:41.983531 : Running CV
+2013-08-20 03:27:44.336886 : Done running CV
+Mean 0.66958 Standard Deviation 0.00273309755081
+2013-08-20 03:27:44.347081 : Done performing classification
+[ 0.67013333  0.67126667  0.66893333  0.67193333  0.67363333  0.6683
+  0.66963333  0.66933333  0.66993333  0.6627    ]
+T:  15
+2013-08-20 03:27:44.360039 : Reading X,y from data/y_X_churn_time_T_15.csv
+2013-08-20 03:27:56.598469 : Done reading
+Number of features (300000, 26)
+(LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='l2', multi_class='ovr', penalty='l2',
+     tol=0.0001, verbose=0), 'LinSVC')
+2013-08-20 03:27:56.637926 : Performing classification
+2013-08-20 03:27:56.637955 : Fetching cv params
+2013-08-20 03:27:56.637997 : Returning cv params
+2013-08-20 03:27:56.638005 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-20 03:27:57.416585 : Performing a Grid Search
+2013-08-20 04:10:56.169188 : Best params
+{'C': 1.0}
+2013-08-20 04:10:56.169252 : Best estimator
+LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-20 04:10:56.169433 : LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-20 04:10:56.169522 : Running CV
+2013-08-20 04:15:49.928574 : Done running CV
+Mean 0.699373333333 Standard Deviation 0.00139585099491
+2013-08-20 04:15:49.940274 : Done performing classification
+[ 0.6991      0.6987      0.6991      0.69766667  0.697       0.7005
+  0.7019      0.69966667  0.70096667  0.69913333]
+T:  30
+2013-08-20 04:15:49.953598 : Reading X,y from data/y_X_churn_time_T_30.csv
+2013-08-20 04:16:04.444299 : Done reading
+Number of features (300000, 26)
+(LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='l2', multi_class='ovr', penalty='l2',
+     tol=0.0001, verbose=0), 'LinSVC')
+2013-08-20 04:16:04.483312 : Performing classification
+2013-08-20 04:16:04.483351 : Fetching cv params
+2013-08-20 04:16:04.483404 : Returning cv params
+2013-08-20 04:16:04.483412 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-20 04:16:05.351998 : Performing a Grid Search
+2013-08-20 05:00:02.626522 : Best params
+{'C': 2.0}
+2013-08-20 05:00:02.626581 : Best estimator
+LinearSVC(C=2.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-20 05:00:02.626739 : LinearSVC(C=2.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss=l2, multi_class=ovr, penalty=l2, tol=0.0001,
+     verbose=0)
+2013-08-20 05:00:02.626807 : Running CV
+2013-08-20 05:04:58.185243 : Done running CV
+Mean 0.725463333333 Standard Deviation 0.0013075379748
+2013-08-20 05:04:58.189181 : Done performing classification
+[ 0.72486667  0.72796667  0.7241      0.72493333  0.72616667  0.7261
+  0.72736667  0.72423333  0.7241      0.7248    ]
+T:  7
+2013-08-20 05:04:58.193940 : Reading X,y from data/y_X_churn_time_T_7.csv
+2013-08-20 05:05:10.356830 : Done reading
+Number of features (300000, 26)
+(SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0,
+  kernel='rbf', probability=False, shrinking=True, tol=0.001,
+  verbose=False), 'SVC')
+2013-08-20 05:05:10.396415 : Performing classification
+2013-08-20 05:05:10.396446 : Fetching cv params
+2013-08-20 05:05:10.396487 : Returning cv params
+2013-08-20 05:05:10.396494 : {'DT': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'RF': {'compute_importances': [True], 'min_samples_leaf': array([  100,   110,   120, ..., 29970, 29980, 29990])}, 'LR': {'penalty': ['l1', 'l2'], 'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}, 'SVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0], 'gamma': [0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]}, 'LinSVC': {'C': [0.03125, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0]}}
+2013-08-20 05:05:11.170971 : Performing a Grid Search
