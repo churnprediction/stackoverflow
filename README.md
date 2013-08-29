@@ -3,7 +3,7 @@
 -----------------------------------------------------------------
 
 
-##Steps to generate the data, analytical plots and to perform classification tasks 
+##Steps to generate the data, analytical plots, and to perform classification tasks 
 
 Skip step 1-4 if you don't intend to generate and clean the data. 
 
