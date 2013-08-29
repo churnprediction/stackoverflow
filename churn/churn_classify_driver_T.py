@@ -4,8 +4,8 @@ from plot_decision_tree import *
 import sys
 #Get the data
 
-for clf in [(SVC(), 'SVC'), (DecisionTreeClassifier(), 'DT')]:
-
+# for clf in [(SVC(), 'SVC'), (DecisionTreeClassifier(), 'DT')]:
+for clf in [(LogisticRegression(), 'LR'), (LinearSVC(), 'LinSVC'), (SVC(), 'SVC'),(DecisionTreeClassifier(), 'DT') ]:
     for T in [7, 15, 30]:
         print "T: ",T
         X, y = getXyFromCsv('data/y_X_churn_time_T_' + str(T) + '.csv', fillMissingWith0=True)

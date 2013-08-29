@@ -5,8 +5,7 @@ import sys
 import itertools
 #Get the data
 
-# for clf in [(LogisticRegression(), 'LR'), (LinearSVC(), 'LinSVC'), (SVC(), 'SVC'),(DecisionTreeClassifier(), 'DT') ]:
-for clf in [(SVC(), 'SVC'),(DecisionTreeClassifier(), 'DT') ]:
+for clf in [(LogisticRegression(), 'LR'), (LinearSVC(), 'LinSVC'), (SVC(), 'SVC'),(DecisionTreeClassifier(), 'DT') ]:
 
     for K in itertools.chain(range(1,6), range(16, 21)):
         print "K: ",K

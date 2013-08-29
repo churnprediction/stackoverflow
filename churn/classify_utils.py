@@ -68,13 +68,13 @@ def cv(X, y, clf, gridSearch=False, gridSearchParams=None, score_type=None, numF
     skf = StratifiedKFold(y, 10)
     if(gridSearch):
         debug("Performing a Grid Search")
-        clf = grid_search.GridSearchCV(clf, gridSearchParams, refit=True)
-        #clf.fit(X, y)
+        clf = grid_search.GridSearchCV(clf, gridSearchParams, refit=True, cv=skf)
+        clf.fit(X, y)
         debug("Best params")
         #print clf.best_params_
         debug("Best estimator")
         #print clf.best_estimator_
-        #clf = clf.best_estimator_
+        clf = clf.best_estimator_
     debug(clf)
     #skf = LeaveOneOut(len(y)) ; print 'Performing LOOCV'
     
